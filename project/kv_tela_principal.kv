@@ -1,0 +1,51 @@
+#encoding: -*- utf-8 -*-
+# ------------------------------------------------- #
+# --- Tela Principal
+# ------------------------------------------------- #
+
+
+<TPrincipal>:
+	name: 'tprincipal'
+	id: tela_principal
+
+	FloatLayout:
+		canvas:
+			Color:
+				#rgba: (0.04, 0.15, 0.26, 1)
+			Rectangle:
+				pos: self.pos
+				size: self.size
+                source: self.background_down
+        background_down: '../assets/ImagesApp/fundo1.png'
+
+		# --- Barra Superior --- #
+		FloatLayout:
+			pos_hint: {'x': 0, 'top': 1}
+			size_hint: (1, .1) 
+
+			ModeloBtn:
+				pos_hint: {'x': .73, 'top': .50}
+				size_hint: (.11, .6)
+				text: 'Registre-se' 
+				on_release: app.root.current = 'tcadastro'
+				outline_width: 1
+				color: [0.,0,0]
+                outline_color: [1,1,1]
+	            font_name: 'RobotoMono-Regular' 
+				
+			ModeloBtn:
+				pos_hint: {'x': .85, 'top': .50}
+				size_hint: (.14, .6)
+				text: 'Reconhecimento' 
+				on_release: app.root.current = 'treconhecimento'
+				outline_width: 1
+                color: [0.,0,0]
+                outline_color: [1,1,1]
+	            font_name: 'RobotoMono-Regular'
+
+
+	 
+
+ 
+
+ 
